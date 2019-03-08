@@ -1,0 +1,5659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidget</class>
+ <widget class="QWidget" name="MainWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>815</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWidget</string>
+  </property>
+  <property name="toolTip">
+   <string>自由测量</string>
+  </property>
+  <widget class="QStackedWidget" name="StackedMain">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>1123</width>
+     <height>710</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border:1px solid rgba(222,0,0,125);
+	background-color: 
+		qlineargradient(spread:pad, 
+		x1:0, y1:0, x2:0, y2:1, 
+		stop:0 rgba(255, 66, 66, 255), 
+		stop:0.05 rgba(255, 66, 66, 255), 
+		stop:0.233 rgba(255, 255, 255, 255), 
+		stop:0.300 rgba(255, 66, 66, 255),
+		stop:0.600 rgba(255, 66, 66, 255)	,
+		stop:1 rgba(125, 66, 66, 255)
+	);
+	border-radius:10px;
+	font-size:30px;
+	color:rgb(255,255,255);
+}
+QPushButton:disabled{
+	background-color:rgb(125,125,125);
+}
+QPushButton:pressed {
+      background-color: 
+		qlineargradient(spread:pad, 
+		x1:0, y1:0, x2:0, y2:1, 
+		stop:0 rgba( 100, 100,255, 255), 
+		stop:0.05 rgba(100, 100,255,  255), 
+		stop:0.233 rgba( 255, 255,255, 255), 
+		stop:0.300 rgba( 100, 100, 255,255),
+		stop:0.600 rgba( 100, 100,255, 255)	,
+		stop:1 rgba( 100, 100,125, 255)
+	);
+}
+
+QRadioButton{
+	border:1px solid rgba(222,0,0,125);
+	background-color: 
+		qlineargradient(spread:pad, 
+		x1:0, y1:0, x2:0, y2:1, 
+		stop:0 rgba(255, 66, 66, 255), 
+		stop:0.05 rgba(255, 66, 66, 255), 
+		stop:0.233 rgba(255, 255, 255, 255), 
+		stop:0.300 rgba(255, 66, 66, 255),
+		stop:0.600 rgba(255, 66, 66, 255)	,
+		stop:1 rgba(125, 66, 66, 255)
+	);
+	border-radius:10px;
+	font-size:15px;
+	color:rgb(255,255,255);
+}
+QRadioButton{
+	border:1px solid rgba(222,0,0,125);
+	background-color: 
+		qlineargradient(spread:pad, 
+		x1:0, y1:0, x2:0, y2:1, 
+		stop:0 rgba(255, 66, 66, 255), 
+		stop:0.05 rgba(255, 66, 66, 255), 
+		stop:0.233 rgba(255, 255, 255, 255), 
+		stop:0.300 rgba(255, 66, 66, 255),
+		stop:0.600 rgba(255, 66, 66, 255)	,
+		stop:1 rgba(125, 66, 66, 255)
+	);
+	border-radius:10px;
+	font-size:15px;
+	color:rgb(255,255,255);
+}
+QRadioButton::indicator {
+    border:none;
+	width:0px;
+	height:0px;
+}
+
+QRadioButton:checked{
+	border:1px solid rgba(200, 200,255,125);
+	background-color: 
+		qlineargradient(spread:pad, 
+		x1:0, y1:0, x2:0, y2:1, 
+		stop:0 rgba( 200, 200,255, 255), 
+		stop:0.05 rgba(200, 200,255,  255), 
+		stop:0.233 rgba( 255, 255,255, 255), 
+		stop:0.300 rgba( 200, 200, 255,255),
+		stop:0.600 rgba( 200, 200,255, 255)	,
+		stop:1 rgba( 200, 200,255, 255)
+	);
+	border-radius:10px;
+	font-size:15px;
+	color:rgb(55,55,55);
+}
+QLabel{
+	font-size:18px;
+}
+QCheckBox{
+	font-size:24px;
+}
+QComboBox{
+	font-size:20px;
+}</string>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="main">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QWidget" name="MainBack" native="true">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>-10</y>
+       <width>1281</width>
+       <height>801</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#MainBack{
+border-image: url(:/new/prefix1/res/MainBackground.png);
+}</string>
+     </property>
+     <widget class="QPushButton" name="btnExit">
+      <property name="geometry">
+       <rect>
+        <x>1090</x>
+        <y>650</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>退出</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnMainDataManager">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>360</y>
+        <width>224</width>
+        <height>68</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>数据管理</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnMainMeasure">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>280</y>
+        <width>224</width>
+        <height>68</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>参数测量</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnMainSystemConfig">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>440</y>
+        <width>224</width>
+        <height>68</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>系统设置</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="edtMain">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>280</y>
+        <width>261</width>
+        <height>231</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_148">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>740</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>版本号:V1.17.12.25-1280-TL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnGPS">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>520</y>
+        <width>224</width>
+        <height>68</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>GPS轨迹</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="PageBaseMeasure">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="BaseMeasureBack" native="true">
+       <property name="styleSheet">
+        <string notr="true">#BaseMeasureBack{
+background-color:rgb(255,255,255);
+}</string>
+       </property>
+       <widget class="QPushButton" name="btn_left_small">
+        <property name="geometry">
+         <rect>
+          <x>940</x>
+          <y>620</y>
+          <width>111</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>微动左</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_left">
+        <property name="geometry">
+         <rect>
+          <x>970</x>
+          <y>560</y>
+          <width>81</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>左</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnMeasure">
+        <property name="geometry">
+         <rect>
+          <x>1065</x>
+          <y>620</y>
+          <width>100</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>测量</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_right">
+        <property name="geometry">
+         <rect>
+          <x>1170</x>
+          <y>560</y>
+          <width>80</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>右</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnLaser">
+        <property name="geometry">
+         <rect>
+          <x>1071</x>
+          <y>560</y>
+          <width>80</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>激光</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_right_small">
+        <property name="geometry">
+         <rect>
+          <x>1170</x>
+          <y>620</y>
+          <width>101</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>微动右</string>
+        </property>
+       </widget>
+       <widget class="QStackedWidget" name="StackMeasure">
+        <property name="geometry">
+         <rect>
+          <x>940</x>
+          <y>220</y>
+          <width>331</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>跨距测量</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size:24px;</string>
+        </property>
+        <property name="currentIndex">
+         <number>7</number>
+        </property>
+        <widget class="QWidget" name="pageJBCL">
+         <property name="toolTip">
+          <string>基本测量</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <property name="toolTip">
+             <string>基本测量</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>120</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>80</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>拉出值:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="lblJBCL_LCZ">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_12">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>20</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>mm</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QLabel" name="label_8">
+                 <property name="minimumSize">
+                  <size>
+                   <width>120</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>80</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>导高值:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="lblJBCL_DGZ">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_13">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>20</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>mm</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="pageKZCL">
+         <property name="toolTip">
+          <string>跨中测量</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_2" native="true">
+            <property name="toolTip">
+             <string>跨中测量</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_10">
+               <item>
+                <widget class="QLabel" name="label_17">
+                 <property name="minimumSize">
+                  <size>
+                   <width>120</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>80</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>跨中高度:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="lblKZCL_KZPY">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_24">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>20</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>mm</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <widget class="QLabel" name="label_23">
+                 <property name="minimumSize">
+                  <size>
+                   <width>120</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>80</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>跨中偏移:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="lblKZCL_KZGD">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_18">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>20</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>mm</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>130</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="pageCMJX">
+         <property name="toolTip">
+          <string>侧面界限测量</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_4" native="true">
+            <property name="toolTip">
+             <string>侧面界限</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_150">
+               <property name="toolTip">
+                <string>侧面界限</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>请瞄准红线位置</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_12">
+               <item>
+                <widget class="QLabel" name="label_27">
+                 <property name="minimumSize">
+                  <size>
+                   <width>120</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>80</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>侧面界限:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="lblCMJX_CMJX">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_28">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>20</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>mm</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>107</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="pageZXTY">
+         <property name="toolTip">
+          <string>中心投影测量</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_5" native="true">
+            <property name="toolTip">
+             <string>中心投影测量</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <widget class="QWidget" name="widgetZXTY_Param" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_11">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_43">
+                  <property name="minimumSize">
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>请输入道岔参数:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_13">
+                  <item>
+                   <widget class="QPushButton" name="btn_ZXTY_param">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_30">
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>(100~999)</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="btnZXTY_OK">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>确定</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widgetZXTYMeasure" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_10">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_22">
+                  <item>
+                   <widget class="QLabel" name="label_46">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>中心投影:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lblZXTY_ZXTY">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_47">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>mm</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_23">
+                  <item>
+                   <widget class="QLabel" name="label_48">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>内轨距:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lblZXTY_NGJ">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_49">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>mm</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_21">
+                  <item>
+                   <widget class="QLabel" name="label_44">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>偏差值:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lblZXTY_PCZ">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_45">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>mm</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>107</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page500GC">
+         <property name="toolTip">
+          <string>500高差测量</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_13">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QStackedWidget" name="stackWdg500">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>12000</height>
+             </size>
+            </property>
+            <widget class="QWidget" name="pg4Point">
+             <widget class="QWidget" name="widget_14" native="true">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>282</width>
+                <height>196</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_4">
+               <item row="0" column="0">
+                <widget class="QLabel" name="widget_500_1">
+                 <property name="text">
+                  <string>请进行第一次测量</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="widget_500_2">
+                 <property name="text">
+                  <string>请进行第二次测量</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="widget_500_5">
+                 <property name="text">
+                  <string>请测量第2根线的第2个点</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="widget_500_4">
+                 <property name="text">
+                  <string>请测量第2根线的第1个点</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QWidget" name="widget_500_3" native="true">
+                 <layout class="QVBoxLayout" name="verticalLayout_14">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_27">
+                    <item>
+                     <widget class="QLabel" name="label_59">
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>80</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>500高差:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="lbl_500_GC">
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_60">
+                      <property name="minimumSize">
+                       <size>
+                        <width>30</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>20</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>mm</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_28">
+                    <item>
+                     <widget class="QLabel" name="label_61">
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>80</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>500间距:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="lbl_500_JJ">
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_62">
+                      <property name="minimumSize">
+                       <size>
+                        <width>30</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>20</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>mm</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="pg2Point">
+             <widget class="QWidget" name="widget_6" native="true">
+              <property name="geometry">
+               <rect>
+                <x>9</x>
+                <y>69</y>
+                <width>321</width>
+                <height>76</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_5">
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                 <item>
+                  <widget class="QLabel" name="label_70">
+                   <property name="minimumSize">
+                    <size>
+                     <width>120</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>500间距:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lbl2Width">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_69">
+                   <property name="minimumSize">
+                    <size>
+                     <width>30</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>20</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>mm</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_5">
+                 <item>
+                  <widget class="QLabel" name="lable">
+                   <property name="minimumSize">
+                    <size>
+                     <width>120</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>500高差:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lbl2Height">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_68">
+                   <property name="minimumSize">
+                    <size>
+                     <width>30</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>20</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>mm</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QLabel" name="wdg2Point1">
+              <property name="geometry">
+               <rect>
+                <x>9</x>
+                <y>9</y>
+                <width>313</width>
+                <height>24</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>请第一次测量</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="wdg2Point2">
+              <property name="geometry">
+               <rect>
+                <x>9</x>
+                <y>39</y>
+                <width>313</width>
+                <height>24</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>请第二次测量</string>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="pageHXGD">
+         <property name="toolTip">
+          <string>红线高度测量</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_17">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_7" native="true">
+            <property name="toolTip">
+             <string>红线高度测量</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_15">
+             <item>
+              <widget class="QWidget" name="widget_500_6" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_16">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_29">
+                  <item>
+                   <widget class="QLabel" name="label_63">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>红线高度:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lbl_HXGD_HXGD">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_64">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>mm</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_6">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>107</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="pageJGGD">
+         <property name="toolTip">
+          <string>结构高度测量</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_20">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_8" native="true">
+            <property name="toolTip">
+             <string>结构高度测量</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_18">
+             <item>
+              <widget class="QLabel" name="widget_JGGD_1">
+               <property name="text">
+                <string>请第一次测量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="widget_JGGD_2">
+               <property name="text">
+                <string>请第二次测量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_JGGD_3" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_19">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_30">
+                  <item>
+                   <widget class="QLabel" name="label_65">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>结构高度:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lbl_JGGD_JGGD">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_66">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>mm</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_7">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>107</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="pageFZ">
+         <property name="toolTip">
+          <string>非支间距测量</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_23">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_9" native="true">
+            <property name="toolTip">
+             <string>非支间距测量</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_21">
+             <item>
+              <widget class="QLabel" name="widget_FZ_1">
+               <property name="text">
+                <string>请第一次测量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="widget_FZ_2">
+               <property name="text">
+                <string>请第二次测量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_FZ_3" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_22">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>6</number>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_34">
+                  <item>
+                   <widget class="QLabel" name="label_71">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>非支间距:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lbl_FZ_JJ">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_72">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>mm</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_41">
+                  <item>
+                   <widget class="QLabel" name="label_85">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>非支高度:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lbl_FZ_GD">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_86">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>mm</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_8">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>107</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="pageDXGD">
+         <property name="toolTip">
+          <string>输电线高度测量</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_26">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_10" native="true">
+            <property name="toolTip">
+             <string>输电线高高度测量</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_24">
+             <item>
+              <widget class="QLabel" name="widget_SDXGD_1">
+               <property name="text">
+                <string>请第一次测量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="widget_SDXGD_2">
+               <property name="text">
+                <string>请第二次测量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_SDXGD_3" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_25">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_42">
+                  <item>
+                   <widget class="QLabel" name="label_87">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>输电线高差:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lbl_SDXGD_SDXGC">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_88">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>mm</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_9">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>107</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="pageDWPD">
+         <property name="toolTip">
+          <string>定位器坡度测量</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_29">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_11" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_27">
+             <item>
+              <widget class="QLabel" name="widget_DWPD_1">
+               <property name="text">
+                <string>请第一次测量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="widget_DWPD_2">
+               <property name="text">
+                <string>请第二次测量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_DWPD_3" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_28">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>6</number>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_46">
+                  <item>
+                   <widget class="QLabel" name="label_95">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>定位器坡度:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lbl_DWPD_PD">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_96">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>n</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_47">
+                  <item>
+                   <widget class="QLabel" name="label_97">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>定位器角度:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lbl_DWPD_JD">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_98">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>度</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_10">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>107</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="pageZYCL">
+         <property name="toolTip">
+          <string>自由测量</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_32">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_12" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_30">
+             <item>
+              <widget class="QLabel" name="widget_ZYCL_1">
+               <property name="text">
+                <string>请第一次测量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="widget_ZYCL_2">
+               <property name="text">
+                <string>请第二次测量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_ZYCL_3" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_31">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>6</number>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_51">
+                  <item>
+                   <widget class="QLabel" name="label_105">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>水平间距:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lbl_ZYCL_SPJJ">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_106">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>mm</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_57">
+                  <item>
+                   <widget class="QLabel" name="label_117">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>垂直间距:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lbl_ZYCL_CZJJ">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_118">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>mm</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_56">
+                  <item>
+                   <widget class="QLabel" name="label_115">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>直线距离:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lbl_ZYCL_ZXJL">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_116">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>mm</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_52">
+                  <item>
+                   <widget class="QLabel" name="label_107">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>垂直角度:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lbl_ZYCL_CZJD">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_108">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>度</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_11">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>107</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="pageDXPD">
+         <property name="toolTip">
+          <string>导线坡度测量</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_69">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_3" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_35">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="lbl_PDJD_msg1">
+               <property name="text">
+                <string>第一次测量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lbl_PDJD_msg2">
+               <property name="text">
+                <string>第二次测量</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="wgtPDJDJJ" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_36">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_38">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>6</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="lbl_PDJD_msg2_2">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="text">
+                     <string>请输入测量间距:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_72">
+                    <item>
+                     <widget class="QPushButton" name="edt_PDJD_JL">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="lbl_PDJD_msg2_3">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>30</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>mm</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="btnPDJDOK">
+                  <property name="text">
+                   <string>确定</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="wgtPDMSG" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_70">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_65">
+                  <item>
+                   <widget class="QLabel" name="label_138">
+                    <property name="minimumSize">
+                     <size>
+                      <width>120</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>导线坡度:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="lblPDJD_PD">
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_139">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>‰</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_12">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="pageKJ">
+         <property name="toolTip">
+          <string>跨距测量</string>
+         </property>
+         <widget class="QLabel" name="widget_KJ1">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>313</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>请第一次测量</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="widget_KJ2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>313</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>请第二次测量</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_154">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>100</y>
+            <width>120</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>120</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>L1:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_157">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>130</y>
+            <width>120</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>120</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>L2:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_158">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>160</y>
+            <width>120</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>120</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>跨距：</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_127">
+          <property name="geometry">
+           <rect>
+            <x>280</x>
+            <y>100</y>
+            <width>30</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>mm</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblKJ_L1">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>100</y>
+            <width>149</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_152">
+          <property name="geometry">
+           <rect>
+            <x>280</x>
+            <y>130</y>
+            <width>30</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>mm</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblKJ_L2">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>130</y>
+            <width>149</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_153">
+          <property name="geometry">
+           <rect>
+            <x>280</x>
+            <y>160</y>
+            <width>30</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>mm</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lblKJ_Value">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>160</y>
+            <width>149</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="wgtCamara" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>921</width>
+          <height>690</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnLastM">
+        <property name="geometry">
+         <rect>
+          <x>940</x>
+          <y>130</y>
+          <width>141</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>上一支柱</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnNextM">
+        <property name="geometry">
+         <rect>
+          <x>1130</x>
+          <y>130</y>
+          <width>141</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>下一支柱</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>700</y>
+          <width>1281</width>
+          <height>62</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_59">
+         <item>
+          <widget class="QRadioButton" name="btnJBCL">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> 基本测量</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btnCMJX">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> 侧面界限</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btnDWPD">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> 定位坡度</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btnZXTY">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> 线岔中心</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btn500GC">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> 500高差</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btnHXGD">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> 红线高度</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btnKZCL">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> 跨中测量</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btnJGGD">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> 结构高度</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btnFZ">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> 非    支</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btnDXGD">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton::indicator{
+width:0px;
+}
+QRadioButton{
+margin-left:0px;
+}</string>
+           </property>
+           <property name="text">
+            <string>输电线高度</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btnDXPD">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> 导线坡度</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btnZYCL">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="text">
+            <string> 自由测量</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btnKJ">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string> 跨    距</string>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnMenuBack">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-size:15px;</string>
+           </property>
+           <property name="text">
+            <string>返回</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>940</x>
+          <y>10</y>
+          <width>375</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_37">
+         <item>
+          <widget class="QSplitter" name="splitter_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <widget class="QLabel" name="label">
+            <property name="minimumSize">
+             <size>
+              <width>36</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>36</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>线路</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cbMS_xl">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>143</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_7">
+            <property name="minimumSize">
+             <size>
+              <width>36</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>36</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>行间</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cbMS_xj">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>143</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSplitter" name="splitter_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <widget class="QLabel" name="label_3">
+            <property name="minimumSize">
+             <size>
+              <width>36</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>36</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>车间</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cbMS_cj">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>143</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_4">
+            <property name="minimumSize">
+             <size>
+              <width>36</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>36</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>工区</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cbMS_gq">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>143</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QSplitter" name="splitter_5">
+        <property name="geometry">
+         <rect>
+          <x>940</x>
+          <y>30</y>
+          <width>321</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_5">
+          <property name="minimumSize">
+           <size>
+            <width>36</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>36</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>线路</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="cbMS_zq">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>999</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QSplitter" name="splitter_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <widget class="QLabel" name="label_6">
+          <property name="minimumSize">
+           <size>
+            <width>36</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>36</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>支柱</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="cbMS_md">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>999</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="widget_13" native="true">
+        <property name="geometry">
+         <rect>
+          <x>940</x>
+          <y>430</y>
+          <width>331</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size:24px;</string>
+        </property>
+        <widget class="QLabel" name="label_151">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>70</y>
+           <width>30</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>20</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>度</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_156">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>70</y>
+           <width>120</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>角度值:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblCGZ">
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>40</y>
+           <width>149</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_123">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>40</y>
+           <width>120</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>超高值:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblJDZ">
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>70</y>
+           <width>149</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_155">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>10</y>
+           <width>120</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>轨距值:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblGJZ">
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>10</y>
+           <width>149</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_124">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>10</y>
+           <width>30</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>20</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>mm</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_131">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>40</y>
+           <width>30</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>20</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>mm</string>
+         </property>
+        </widget>
+       </widget>
+       <zorder>splitter_5</zorder>
+       <zorder>layoutWidget</zorder>
+       <zorder>btn_left_small</zorder>
+       <zorder>btn_left</zorder>
+       <zorder>btnMeasure</zorder>
+       <zorder>btn_right</zorder>
+       <zorder>btnLaser</zorder>
+       <zorder>btn_right_small</zorder>
+       <zorder>StackMeasure</zorder>
+       <zorder>wgtCamara</zorder>
+       <zorder>btnLastM</zorder>
+       <zorder>btnNextM</zorder>
+       <zorder>layoutWidget</zorder>
+       <zorder>widget_13</zorder>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="PageDataManager">
+    <widget class="QPushButton" name="btnDM_back">
+     <property name="geometry">
+      <rect>
+       <x>1150</x>
+       <y>670</y>
+       <width>91</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>返回</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnDataExport">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>670</y>
+       <width>150</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>导出数据</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnViewData">
+     <property name="geometry">
+      <rect>
+       <x>990</x>
+       <y>40</y>
+       <width>251</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>删除当前线路数据</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="wgtDataView">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>1211</width>
+       <height>551</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string>新建列</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>新建列</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QComboBox" name="cmbFilter">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>61</y>
+       <width>251</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnRemoteUpdate">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>670</y>
+       <width>150</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>远程同步</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="widget_KJ2_3">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>680</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>远程数据库</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblRemoteDb">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>680</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/res/deviceOn.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="PageSystemConfig">
+    <widget class="QPushButton" name="btnSC_SaveL">
+     <property name="geometry">
+      <rect>
+       <x>1120</x>
+       <y>220</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>保存参数</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>10</y>
+       <width>321</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_33">
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_20">
+        <item>
+         <widget class="QLabel" name="label_125">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>L1:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnSC_L1">
+          <property name="styleSheet">
+           <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_58">
+        <item>
+         <widget class="QLabel" name="label_126">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>L2:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnSC_L2">
+          <property name="styleSheet">
+           <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_60">
+        <item>
+         <widget class="QLabel" name="label_128">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>L3:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnSC_L3">
+          <property name="styleSheet">
+           <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_62">
+        <item>
+         <widget class="QLabel" name="label_130">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>L4:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnSC_L4">
+          <property name="styleSheet">
+           <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_61">
+        <item>
+         <widget class="QLabel" name="label_129">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>L5:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnSC_L5">
+          <property name="styleSheet">
+           <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="btnSY_down">
+     <property name="geometry">
+      <rect>
+       <x>1070</x>
+       <y>610</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>下</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSY_up">
+     <property name="geometry">
+      <rect>
+       <x>1070</x>
+       <y>530</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>上</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSY_right">
+     <property name="geometry">
+      <rect>
+       <x>1140</x>
+       <y>570</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>右</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSC_back">
+     <property name="geometry">
+      <rect>
+       <x>1190</x>
+       <y>710</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>返回</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="wgtCamara_Config" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>920</width>
+       <height>690</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSY_left">
+     <property name="geometry">
+      <rect>
+       <x>1000</x>
+       <y>570</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>左</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSC_save_time">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>720</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>保存时间</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>670</y>
+       <width>255</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_73">
+      <item>
+       <widget class="QCheckBox" name="cbSC_jlms">
+        <property name="text">
+         <string>记录模式</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cbSC_clms">
+        <property name="text">
+         <string>测量模式</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="btnSC_JDQJConfig">
+     <property name="geometry">
+      <rect>
+       <x>990</x>
+       <y>460</y>
+       <width>251</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>拉出值与超高校准</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_149">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>510</y>
+       <width>161</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>设置光标位置</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>720</y>
+       <width>591</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_71">
+      <item>
+       <widget class="QPushButton" name="btnSC_year">
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+        </property>
+        <property name="text">
+         <string>2017</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_29">
+        <property name="text">
+         <string>年</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSC_month">
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+        </property>
+        <property name="text">
+         <string>10</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_50">
+        <property name="text">
+         <string>月</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSC_day">
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+        </property>
+        <property name="text">
+         <string>10</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_119">
+        <property name="text">
+         <string>日</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSC_hour">
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+        </property>
+        <property name="text">
+         <string>10</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_120">
+        <property name="text">
+         <string>时</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSC_min">
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+        </property>
+        <property name="text">
+         <string>10</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_121">
+        <property name="text">
+         <string>分</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSC_second">
+        <property name="styleSheet">
+         <string notr="true">border:1px solid rgb(55,55,55);
+border-radius:5px;
+background-color:rgb(255,255,255);
+color:rgb(22,22,22);</string>
+        </property>
+        <property name="text">
+         <string>10</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_122">
+        <property name="text">
+         <string>秒</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>270</y>
+       <width>44</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_39">
+      <item>
+       <widget class="QPushButton" name="btn_sm_sub">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_big_sub">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_touch_sub">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_moto_step_sub">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>1220</x>
+       <y>270</y>
+       <width>42</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_40">
+      <item>
+       <widget class="QPushButton" name="btn_sm_add">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_big_add">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_touch_add">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_moto_step_add">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QSlider" name="slr_moto_step">
+     <property name="geometry">
+      <rect>
+       <x>1000</x>
+       <y>418</y>
+       <width>201</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="minimum">
+      <number>300</number>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="slr_touch_scale">
+     <property name="geometry">
+      <rect>
+       <x>1000</x>
+       <y>377</y>
+       <width>201</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="minimum">
+      <number>80</number>
+     </property>
+     <property name="maximum">
+      <number>500</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_147">
+     <property name="geometry">
+      <rect>
+       <x>1000</x>
+       <y>397</y>
+       <width>201</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>连续运动间隔时间</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="slr_sm_moto">
+     <property name="geometry">
+      <rect>
+       <x>1000</x>
+       <y>295</y>
+       <width>201</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="maximum">
+      <number>500</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_134">
+     <property name="geometry">
+      <rect>
+       <x>1000</x>
+       <y>274</y>
+       <width>201</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>电机微动旋转速度</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_135">
+     <property name="geometry">
+      <rect>
+       <x>1000</x>
+       <y>315</y>
+       <width>201</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>电机速动旋转速度</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="slr_big_moto">
+     <property name="geometry">
+      <rect>
+       <x>1000</x>
+       <y>336</y>
+       <width>201</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="maximum">
+      <number>2000</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_146">
+     <property name="geometry">
+      <rect>
+       <x>1000</x>
+       <y>356</y>
+       <width>201</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>自动寻线灵敏度</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>710</y>
+       <width>89</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>无</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_2">
+     <property name="geometry">
+      <rect>
+       <x>820</x>
+       <y>710</y>
+       <width>89</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>上下镜像</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_3">
+     <property name="geometry">
+      <rect>
+       <x>930</x>
+       <y>710</y>
+       <width>89</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>左右镜像</string>
+     </property>
+    </widget>
+    <zorder>layoutWidget</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>slr_moto_step</zorder>
+    <zorder>slr_touch_scale</zorder>
+    <zorder>label_147</zorder>
+    <zorder>slr_sm_moto</zorder>
+    <zorder>label_134</zorder>
+    <zorder>label_135</zorder>
+    <zorder>slr_big_moto</zorder>
+    <zorder>label_146</zorder>
+    <zorder>btnSC_SaveL</zorder>
+    <zorder>verticalLayoutWidget</zorder>
+    <zorder>btnSY_down</zorder>
+    <zorder>btnSY_up</zorder>
+    <zorder>btnSY_right</zorder>
+    <zorder>btnSC_back</zorder>
+    <zorder>wgtCamara_Config</zorder>
+    <zorder>btnSY_left</zorder>
+    <zorder>btnSC_save_time</zorder>
+    <zorder>verticalLayoutWidget_2</zorder>
+    <zorder>btnSC_JDQJConfig</zorder>
+    <zorder>label_149</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>radioButton</zorder>
+    <zorder>radioButton_2</zorder>
+    <zorder>radioButton_3</zorder>
+   </widget>
+   <widget class="QWidget" name="PageDataView">
+    <widget class="QPushButton" name="btnDV_Back">
+     <property name="geometry">
+      <rect>
+       <x>1200</x>
+       <y>720</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>返回</string>
+     </property>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>1261</width>
+       <height>651</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="page">
+      <widget class="QTableWidget" name="tbWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>1261</width>
+         <height>641</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QScrollBar:vertical {
+       width: 50px;
+
+   }
+QScrollBar:horizontal{
+height:50px;
+}
+</string>
+       </property>
+       <column>
+        <property name="text">
+         <string>线路</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>行别</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>车间</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>工区</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>站区</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>锚点</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>测量日期</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>测量时间</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>轨距</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>超高</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>角度</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>拉出值</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>导高</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>跨中偏离</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>跨中高度</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>侧面界限</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>中心投影</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>内轨距</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>偏差值</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>500高差</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>500间距</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>红线高度</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>结构高度</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>导线坡度</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>非支间距</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>非支高度</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>输电线高差</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>定位坡度</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>坡度角度</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>水平间距</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>垂直间距</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>直线间距</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>垂直角度</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <widget class="QwtPlot" name="qwtPlot_lcz">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>49</y>
+         <width>641</width>
+         <height>601</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QwtPlot" name="qwtPlot_dg">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>50</y>
+         <width>621</width>
+         <height>601</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_132">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>11</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>拉出值</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_133">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>10</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>导高</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>44</x>
+       <y>10</y>
+       <width>191</width>
+       <height>52</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_63">
+      <item>
+       <widget class="QRadioButton" name="btn_listView">
+        <property name="minimumSize">
+         <size>
+          <width>86</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>86</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>列表查看</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="btn_plotView">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>波形图查看</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="PageAngleConfig">
+    <widget class="QPushButton" name="btnSC_QJConfig_2">
+     <property name="geometry">
+      <rect>
+       <x>930</x>
+       <y>380</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>超高校准</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="wgtCamara_ac_Config" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>901</width>
+       <height>691</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="lblACMessage">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>10</y>
+        <width>421</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(255,0,0);
+font: 75 24pt &quot;微软雅黑&quot;;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="btnSC_JDConfig_2">
+     <property name="geometry">
+      <rect>
+       <x>930</x>
+       <y>330</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>拉出值校准</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSC_jd_clear_2">
+     <property name="geometry">
+      <rect>
+       <x>1120</x>
+       <y>330</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>角度清零</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSC_qj_clear_2">
+     <property name="geometry">
+      <rect>
+       <x>1120</x>
+       <y>380</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>超高清零</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_AC_Back">
+     <property name="geometry">
+      <rect>
+       <x>1200</x>
+       <y>710</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>返回</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_AC_left_small">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>620</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>微动左</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_AC_right_small">
+     <property name="geometry">
+      <rect>
+       <x>1170</x>
+       <y>620</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>微动右</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_AC_right">
+     <property name="geometry">
+      <rect>
+       <x>1160</x>
+       <y>560</y>
+       <width>80</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>右</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnConfigMeasure">
+     <property name="geometry">
+      <rect>
+       <x>1060</x>
+       <y>620</y>
+       <width>101</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>测量</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnACLaser">
+     <property name="geometry">
+      <rect>
+       <x>1070</x>
+       <y>560</y>
+       <width>80</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>激光</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_AC_left">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>560</y>
+       <width>81</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>左</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>930</x>
+       <y>20</y>
+       <width>341</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_35">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_65">
+        <item>
+         <widget class="QLabel" name="label_140">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>拉出值:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblJBCL_LCZ_2">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_141">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>mm</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_66">
+        <item>
+         <widget class="QLabel" name="label_142">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>导高值:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblJBCL_DGZ_2">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_143">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>mm</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_67">
+        <item>
+         <widget class="QLabel" name="label_144">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>轨距值:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblJBCL_GJZ_2">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_145">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>mm</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_59">
+        <item>
+         <widget class="QLabel" name="label_136">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>超高值:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblJBCL_CGZ_2">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_137">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>mm</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_64">
+        <item>
+         <widget class="QLabel" name="label_138">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>角度值:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblJBCL_JDZ_2">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_139">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>度</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="pageGPS">
+    <property name="toolTip">
+     <string>GPS轨迹记录...</string>
+    </property>
+    <widget class="QPushButton" name="btn_GPS_Back">
+     <property name="geometry">
+      <rect>
+       <x>1180</x>
+       <y>690</y>
+       <width>86</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:15px;</string>
+     </property>
+     <property name="text">
+      <string>返回</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chbGps">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>690</y>
+       <width>141</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>记录轨迹</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="widget_KJ2_2">
+     <property name="geometry">
+      <rect>
+       <x>1020</x>
+       <y>693</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>GPS状态</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblGPSStatus">
+     <property name="geometry">
+      <rect>
+       <x>1100</x>
+       <y>690</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/res/deviceOn.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblLongitude">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>690</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(85, 170, 127);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="widget_KJ2_4">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>690</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>纬度</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblLatitude">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>690</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(85, 170, 127);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="widget_KJ2_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>690</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>经度</string>
+     </property>
+    </widget>
+    <widget class="QStackedWidget" name="stkGps">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>981</width>
+       <height>451</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border:1px solid rgba(222,0,0,125);
+	background-color: 
+		qlineargradient(spread:pad, 
+		x1:0, y1:0, x2:0, y2:1, 
+		stop:0 rgba(255, 66, 66, 255), 
+		stop:0.05 rgba(255, 66, 66, 255), 
+		stop:0.233 rgba(255, 255, 255, 255), 
+		stop:0.300 rgba(255, 66, 66, 255),
+		stop:0.600 rgba(255, 66, 66, 255)	,
+		stop:1 rgba(125, 66, 66, 255)
+	);
+	border-radius:10px;
+	font-size:30px;
+	color:rgb(255,255,255);
+}
+QPushButton:disabled{
+	background-color:rgb(125,125,125);
+}
+QPushButton:pressed {
+      background-color: 
+		qlineargradient(spread:pad, 
+		x1:0, y1:0, x2:0, y2:1, 
+		stop:0 rgba( 100, 100,255, 255), 
+		stop:0.05 rgba(100, 100,255,  255), 
+		stop:0.233 rgba( 255, 255,255, 255), 
+		stop:0.300 rgba( 100, 100, 255,255),
+		stop:0.600 rgba( 100, 100,255, 255)	,
+		stop:1 rgba( 100, 100,125, 255)
+	);
+}
+
+QRadioButton{
+	border:1px solid rgba(222,0,0,125);
+	background-color: 
+		qlineargradient(spread:pad, 
+		x1:0, y1:0, x2:0, y2:1, 
+		stop:0 rgba(255, 66, 66, 255), 
+		stop:0.05 rgba(255, 66, 66, 255), 
+		stop:0.233 rgba(255, 255, 255, 255), 
+		stop:0.300 rgba(255, 66, 66, 255),
+		stop:0.600 rgba(255, 66, 66, 255)	,
+		stop:1 rgba(125, 66, 66, 255)
+	);
+	border-radius:10px;
+	font-size:15px;
+	color:rgb(255,255,255);
+}
+QRadioButton{
+	border:1px solid rgba(222,0,0,125);
+	background-color: 
+		qlineargradient(spread:pad, 
+		x1:0, y1:0, x2:0, y2:1, 
+		stop:0 rgba(255, 66, 66, 255), 
+		stop:0.05 rgba(255, 66, 66, 255), 
+		stop:0.233 rgba(255, 255, 255, 255), 
+		stop:0.300 rgba(255, 66, 66, 255),
+		stop:0.600 rgba(255, 66, 66, 255)	,
+		stop:1 rgba(125, 66, 66, 255)
+	);
+	border-radius:10px;
+	font-size:15px;
+	color:rgb(255,255,255);
+}
+QRadioButton::indicator {
+    border:none;
+	width:0px;
+	height:0px;
+}
+
+QRadioButton:checked{
+	border:1px solid rgba(200, 200,255,125);
+	background-color: 
+		qlineargradient(spread:pad, 
+		x1:0, y1:0, x2:0, y2:1, 
+		stop:0 rgba( 200, 200,255, 255), 
+		stop:0.05 rgba(200, 200,255,  255), 
+		stop:0.233 rgba( 255, 255,255, 255), 
+		stop:0.300 rgba( 200, 200, 255,255),
+		stop:0.600 rgba( 200, 200,255, 255)	,
+		stop:1 rgba( 200, 200,255, 255)
+	);
+	border-radius:10px;
+	font-size:15px;
+	color:rgb(55,55,55);
+}
+QLabel{
+	font-size:18px;
+}
+QCheckBox{
+	font-size:24px;
+}
+QComboBox{
+	font-size:20px;
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="main_3">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QCustomPlot" name="wdgDrawGPS" native="true">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_3">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="lblSimGps">
+         <property name="styleSheet">
+          <string notr="true">border-image: url(:/res/simgps.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QwtPlot</class>
+   <extends>QFrame</extends>
+   <header>qwt_plot.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header location="global">qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
